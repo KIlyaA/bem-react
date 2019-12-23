@@ -153,7 +153,7 @@ export class Registry {
    *
    * @param id component id
    */
-  get<T>(id: string): IRegistryEntity<T> {
+  get<T>(id: string): ComponentType<T> {
     if (__DEV__) {
       if (!this.components[id]) {
         throw new Error(`Component with id '${id}' not found.`)
